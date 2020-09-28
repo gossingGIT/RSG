@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+C:\test\RSG_Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2283005059.index
+\RSG\src\main\java
