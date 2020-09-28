@@ -22,7 +22,6 @@
 /frontend/yarn-debug.log*
 /frontend/yarn-error.log*
 
-/RSG_Spring/RSG/.classpath
 /RSG_Spring/RSG/target
 /RSG_Spring/RSG/src/main/resources/properties
 /RSG_Spring/Servers
