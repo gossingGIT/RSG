@@ -35,6 +35,12 @@
 		<beans:property name="preparerFactoryClass" value="org.springframework.web.servlet.view.tiles2.SpringBeanPreparerFactory"/>
 	</beans:bean> -->
 	
+	<!-- 파일업로드 multipartResolver -->
+	<!-- <beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<beans:property name="maxUploadSize" value="10000000" />
+        <beans:property name="maxInMemorySize" value="100000000" />
+	</beans:bean> -->
+	
 	<context:component-scan base-package="org.project.controller" />
 
 </beans:beans>
