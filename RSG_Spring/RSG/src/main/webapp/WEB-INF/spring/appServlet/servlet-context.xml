@@ -9,6 +9,9 @@
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 	
+	<!-- 자동 bean 등록 -->
+	<context:component-scan base-package="org.project" />
+	
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
 
@@ -19,10 +22,9 @@
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
+		<beans:property name="contentType" value="text/html; charset=UTF-8" />
 	</beans:bean>
 	
 	<context:component-scan base-package="org.project.controller" />
-	
-	
-	
+
 </beans:beans>
