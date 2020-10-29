@@ -34,10 +34,15 @@ import {
   InputGroupAddon,
   Input,
 } from "reactstrap";
-
 import routes from "routes.js";
-
+import Login from "../../views/Login";
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoginModalOpen : false,
+    }
+  }
   state = {
     isOpen: false,
     dropdownOpen: false,
@@ -88,6 +93,9 @@ class Header extends React.Component {
     });
     return name;
   };
+
+  
+
   openSidebar = () => {
     document.documentElement.classList.toggle("nav-open");
     this.sidebarToggle.current.classList.toggle("toggled");
@@ -117,6 +125,16 @@ class Header extends React.Component {
       this.sidebarToggle.current.classList.toggle("toggled");
     }
   }
+
+  openLoginModal = () => {
+    this.setState({ isLoginModalOpen : true});
+    console.log("openLoginModal");
+  }
+
+  closeLoginModal = () => {
+    this.setState({ isLoginModalOpen : false});
+  }
+
   render() {
     return (
       // add or remove classes depending if we are on full-screen-maps page or not
@@ -197,7 +215,7 @@ class Header extends React.Component {
                 </DropdownMenu>
               </Dropdown>
               <NavItem>
-                <Link to="#pablo" className="nav-link">
+                <Link className="nav-link" onClick={this.openLoginModal}>
                   <i className="now-ui-icons users_single-02" />
                   <p>
                     <span className="d-lg-none d-md-block">Account</span>
@@ -207,6 +225,7 @@ class Header extends React.Component {
             </Nav>
           </Collapse>
         </Container>
+        <Login isOpen = {this.state.isLoginModalOpen} close = {this.closeLoginModal}/>
       </Navbar>
     );
   }

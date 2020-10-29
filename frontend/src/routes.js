@@ -23,6 +23,7 @@ import TableList from "views/TableList.js";
 import Maps from "views/Maps.js";
 import Upgrade from "views/Upgrade.js";
 import UserPage from "views/UserPage.js";
+import Login from 'views/Login';
 
 var dashRoutes = [
   {
@@ -73,6 +74,14 @@ var dashRoutes = [
     icon: "design-2_ruler-pencil",
     component: Typography,
     layout: "/admin",
+  },
+  {
+    path: "/login",
+    name: "로그인",
+    icon: "design-2_ruler-pencil",
+    component: Login,
+    layout: "/admin",
+    invisible : true,
   },
 ];
 export default dashRoutes;

@@ -1,6 +1,6 @@
 package org.project.dao.rsgUser;
 
-import org.apache.ibatis.session.SqlSession;
+import org.mybatis.spring.SqlSessionTemplate;
 import org.project.domain.rsgUser.LoginDTO;
 import org.project.domain.rsgUser.RsgUserVO;
 import org.slf4j.Logger;
@@ -14,7 +14,7 @@ public class UserDaoImpl implements UserDao {
 	private static final Logger log = LoggerFactory.getLogger(UserDaoImpl.class);
 	
 	@Autowired
-	private SqlSession session;
+	private SqlSessionTemplate session;
 	
 	private String namespace = "org.project.mapper.UserMapper";
 	
