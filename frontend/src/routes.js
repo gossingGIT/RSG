@@ -23,6 +23,7 @@ import TableList from "views/TableList.js";
 import Maps from "views/Maps.js";
 import Upgrade from "views/Upgrade.js";
 import UserPage from "views/UserPage.js";
+import GroupPage from "views/CreateGroupPage.js"
 
 var dashRoutes = [
   {
@@ -74,5 +75,21 @@ var dashRoutes = [
     component: Typography,
     layout: "/admin",
   },
+  {
+    path: "/createGroup",
+    name: "그룹생성",
+    icon: "design-2_ruler-pencil",
+    component: GroupPage,
+    layout: "/admin",
+    children:[
+      {
+        name:"테스트1",
+        icon: "design-2_ruler-pencil"
+      },{
+        name:"테스트2",
+        icon: "design-2_ruler-pencil"
+      }
+    ]
+  }
 ];
 export default dashRoutes;
