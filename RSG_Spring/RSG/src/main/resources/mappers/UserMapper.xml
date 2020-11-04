@@ -6,6 +6,7 @@
 	<select id = "login" parameterType = "org.project.domain.rsgUser.LoginDTO" resultType = "org.project.domain.rsgUser.RsgUserVO">
 	SELECT 
 		UID,
+		UPW,
 		UNAME,
 		ULEVEL,
 		ULAST_LOGIN as ulastLogin
@@ -14,7 +15,6 @@
 	WHERE
 		1=1
 		AND UID = #{uid}
-		AND UPW = #{upw}
 		AND UDEL_YN = 'N'
 	</select>
 

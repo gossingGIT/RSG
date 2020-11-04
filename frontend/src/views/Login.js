@@ -34,7 +34,8 @@ export default class Login extends React.Component {
                  'Content-type' : 'application/json'
                 },
                 body : JSON.stringify(data)
-            });
+            }).then(response => alert("로그인 성공"))
+            .catch(error => alert("로그인 실패"))
         }
        
     }
